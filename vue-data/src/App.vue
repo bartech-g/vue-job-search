@@ -1,8 +1,7 @@
 <template>
-  <div class="max-h-screen w-full flex flex-col bg-mist-50">
+  <div class="h-screen w-full flex flex-col bg-mist-50">
     <TheNav />
-    <main class="flex-1 container mx-auto px-4 py-8">
-      <h1>Job Search</h1>
+    <main class="flex-1 h-full container mx-auto px-4 py-8">
       <JobSearch />
       <hr class="my-6 border-mist-300" />
       <JobList />

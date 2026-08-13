@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-mist-100 text-mist-600 py-6 border-b border-mist-300">
+  <div class="bg-mist-100 text-mist-600 py-6">
     <nav class="container mx-auto px-4 flex justify-between items-center">
       <h1 class="text-xl font-bold">Job Search App</h1>
       <!-- <div class="flex gap-4">
