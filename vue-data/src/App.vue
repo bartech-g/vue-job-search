@@ -1,25 +1,21 @@
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to
-    read the documentation
-  </p>
-  <pre>{{ JSON.stringify({ results, loading, error }, null, 2) }}</pre>
+  <div class="max-h-screen w-full flex flex-col bg-mist-50">
+    <TheNav />
+    <main class="flex-1 container mx-auto px-4 py-8">
+      <h1>Job Search</h1>
+      <JobSearch />
+      <hr class="my-6 border-mist-300" />
+      <JobList />
+    </main>
+    <TheFooter />
+  </div>
 </template>
 
 <script setup lang="ts">
-import { useJobsStore } from "@/stores/jobStore";
-import { storeToRefs } from "pinia";
-import { onMounted } from "vue";
-
-const jobsStore = useJobsStore();
-
-const { results, loading, error } = storeToRefs(jobsStore);
-
-onMounted(() => {
-  jobsStore.search({ keywords: "developer" });
-});
+import JobList from "./components/JobList.vue";
+import JobSearch from "./components/JobSearch.vue";
+import TheFooter from "./components/TheFooter.vue";
+import TheNav from "./components/TheNav.vue";
 </script>
 
 <style scoped></style>

@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+a {
+  @apply text-mist-500;
+
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s ease;
+  border-bottom: 1px solid var(--color-mist-400);
+}
+
+a:hover {
+  @apply text-mist-900;
+}
