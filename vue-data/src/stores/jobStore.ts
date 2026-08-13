@@ -6,6 +6,7 @@ import type { JoobleJob } from '@/types/joobleJob';
 
 export const useJobsStore = defineStore('jobs', () => {
     const results = ref<JoobleJob[]>([]);
+    const totalCount = ref<number>(0);
     const loading = ref(false);
     const error = ref<string | null>(null);
 
@@ -14,7 +15,8 @@ export const useJobsStore = defineStore('jobs', () => {
         error.value = null;
         try {
             const data = await searchJobs(params);
-            results.value = data ?? [];
+            results.value = data.results?.jobs ?? [];
+            totalCount.value = data.results?.totalCount ?? 0;
         } catch (e) {
             error.value = 'Failed to fetch jobs';
         } finally {
