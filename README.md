@@ -1,6 +1,6 @@
 # Vue Job Search App
 
-A simple job search application built with **Vue 3** (frontend) and **Node.js / Express** (backend), powered by the [Jooble API](https://jooble.org/api).
+A simple job search application built with **Vue 3** (frontend) and **Node.js / Express** (backend), powered by the [Jooble API](https://jooble.org/api/about).
 
 The backend acts as a proxy to keep the Jooble API key secret. The frontend never exposes the key directly.
 
@@ -40,7 +40,7 @@ cd ../vue-data && npm install
 JOOBLE_API_KEY="your-jooble-api-key-here"
 ```
 
-You can get a key at [jooble.org/api](https://jooble.org/api).
+You can get a key at [jooble.org/api](https://jooble.org/api/about).
 
 ## Running the App
 
@@ -60,11 +60,11 @@ The Vite dev server proxies `/api/*` requests to the Express backend at `http://
 
 ## Key Technologies
 
-| Layer | Tech |
-|-------|------|
+| Layer    | Tech                                          |
+| -------- | --------------------------------------------- |
 | Frontend | Vue 3, Pinia, Axios, Tailwind CSS, TypeScript |
-| Backend | Express, Zod, Helmet, CORS, dotenv, Morgan |
-| API | Jooble Job Search API |
+| Backend  | Express, Zod, Helmet, CORS, dotenv, Morgan    |
+| API      | Jooble Job Search API                         |
 
 ## Security Note
 
