@@ -10,5 +10,5 @@ export interface JobSearchParams {
 
 export async function searchJobs(params: JobSearchParams) {
     const { data } = await axios.post('/api/jobs/search', params);
-    return data ?? [];
+    return data ?? {};
 }
